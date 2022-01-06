@@ -27,7 +27,7 @@ RUN R -e "install.packages('latticeExtra', repos = 'http://cran.uk.r-project.org
 	
 RUN R -e "install.packages('Hmisc', repos = 'http://cran.uk.r-project.org')"	
 	
-#RUN cd /usr \
+RUN cd /usr \
     && wget --no-check-certificate https://sourceforge.net/projects/excavator2tool/files/EXCAVATOR2_Package_v1.1.2.tgz \
     && tar zxvf EXCAVATOR2_Package_v1.1.2.tgz \
     && R CMD SHLIB /usr/EXCAVATOR2_Package_v1.1.2/lib/F77/F4R.f \
